@@ -1,0 +1,21 @@
+Preliminary work converting Deform templates to Mako
+
+Quickstart guide:
+
+__init__.py
+
+::
+    from deform import Form
+    from project.lib import mako_renderer
+
+    Form.set_default_renderer(mako_renderer)
+
+project/lib/__init.py
+
+:: 
+
+    from mako.template import Template
+
+    def mako_renderer(tmpl_name, **kw):
+        template = Template(filename='templates/%s.mako' % tmpl_name)
+        return template.render(**kw)
