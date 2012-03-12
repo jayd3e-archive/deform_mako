@@ -2,7 +2,7 @@
 <ul>
   <li>
     <label for="${field.oid}" i18n:translate="">Password</label>
-    <input type="password" name="value" value="${cstruct}"
+    <input type="password" name="${field.name}" value="${cstruct}"
 % if field.widget.size:
 size="${field.widget.size}"
 % endif
@@ -10,7 +10,7 @@ size="${field.widget.size}"
   </li>
   <li>
     <label for="${field.oid}-confirm" i18n:translate="">Confirm Password</label>
-    <input type="password" name="confirm" value="${confirm}"
+    <input type="password" name="${field.name}-confirm" value="${confirm}"
 % if field.widget.size:
 size="${field.widget.size}"
 % endif
