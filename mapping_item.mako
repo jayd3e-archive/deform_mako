@@ -32,10 +32,10 @@
 		%>
 		% for msg in field.error.messages():
 			<p
-			% if repeat.msg.index==0:
+			% if msg.index==0:
 				id="${errstr}"
 			% else:
-				id=${'%s-%s' % (errstr, repeat.msg.index)}
+				id=${'%s-%s' % (errstr, msg.index)}
 			% endif
 			class="${field.widget.error_class}" i18n:translate="">${msg}</p>
 		% endfor
